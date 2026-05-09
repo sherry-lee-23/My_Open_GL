@@ -18,8 +18,24 @@
     <ClCompile Include="..\Dependencies\GLAD\src\glad.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Getting started\Triangle.cpp">
+    <ClCompile Include="Getting started\Textures.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Getting started\shader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Getting started\stb_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Getting started\ourShader.vs" />
+    <None Include="Getting started\ourShader.fs" />
+    <None Include="x64\Debug\ourShader.vs" />
+    <None Include="x64\Debug\ourShader.fs" />
+    <None Include="Getting started\shader_for_textures.vs" />
+    <None Include="Getting started\shader_for_textures.fs" />
   </ItemGroup>
 </Project>
