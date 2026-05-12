@@ -18,7 +18,7 @@
     <ClCompile Include="..\Dependencies\GLAD\src\glad.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Getting started\Textures.cpp">
+    <ClCompile Include="Getting started\Transformations.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -37,5 +37,7 @@
     <None Include="x64\Debug\ourShader.fs" />
     <None Include="Getting started\shader_for_textures.vs" />
     <None Include="Getting started\shader_for_textures.fs" />
+    <None Include="Getting started\5.1.transformation.vs" />
+    <None Include="Getting started\5.1.transformation.fs" />
   </ItemGroup>
 </Project>

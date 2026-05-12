@@ -1,11 +1,16 @@
-#include<glad/glad.h>
-#include<GLFW/glfw3.h>
+#include <glad/glad.h> 
+#include <GLFW\glfw3.h>
 
 #define STB_IMAGE_IMPLEMENTATION
 #include"stb_image.h"
 #include"shader.h"
 
-#include<iostream>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
+#include <iostream>
+
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
@@ -45,16 +50,16 @@ int main() {
     }
 
     Shader ourShader(
-        "C:\\Users\\Lenovo\\source\\repos\\Open_GL\\Open_GL\\Getting started\\shader_for_textures.vs",
-        "C:\\Users\\Lenovo\\source\\repos\\Open_GL\\Open_GL\\Getting started\\shader_for_textures.fs"
+        "C:\\Users\\Lenovo\\source\\repos\\Open_GL\\Open_GL\\Getting started\\5.1.transformation.vs",
+        "C:\\Users\\Lenovo\\source\\repos\\Open_GL\\Open_GL\\Getting started\\5.1.transformation.fs"
     );
 
     float verrtices[] = {
-                                        //Œ∆¿Ì
-        0.5f, 0.5f, 0.0f,   1.0f,0.0f,0.0f, 0.0f,0.0f,
-        0.5f,-0.5f, 0.0f,   0.0f,1.0f,0.0f, 0.0f,1.0f,
-        -0.5f,-0.5f,0.0f,   0.0f,0.0f,1.0f, 1.0f,1.0f,
-        -0.5f, 0.5f,0.0f,   1.0f,1.0f,0.0f, 1.0f,0.0f
+        //Œ∆¿Ì
+0.5f, 0.5f, 0.0f,   1.0f,0.0f,0.0f, 0.0f,0.0f,
+0.5f,-0.5f, 0.0f,   0.0f,1.0f,0.0f, 0.0f,1.0f,
+-0.5f,-0.5f,0.0f,   0.0f,0.0f,1.0f, 1.0f,1.0f,
+-0.5f, 0.5f,0.0f,   1.0f,1.0f,0.0f, 1.0f,0.0f
     };
 
     unsigned int indices[] = {
@@ -62,18 +67,18 @@ int main() {
         1,2,3
     };
 
-    unsigned int VBO, VAO,EBO;
+    unsigned int VBO, VAO, EBO;
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
-	glGenBuffers(1, &EBO);
+    glGenBuffers(1, &EBO);
 
     glBindVertexArray(VAO);
 
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(verrtices), verrtices, GL_STATIC_DRAW);
 
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
@@ -106,6 +111,7 @@ int main() {
     }
     stbi_image_free(data);
 
+
     while (!glfwWindowShouldClose(window)) {
         processInput(window);
 
@@ -116,7 +122,7 @@ int main() {
 
         ourShader.use();
         glBindVertexArray(VAO);
-        glDrawElements(GL_TRIANGLES, 6,GL_UNSIGNED_INT,0);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
         glfwSwapBuffers(window);
         glfwPollEvents();
@@ -128,8 +134,13 @@ int main() {
 
     glfwTerminate();
     return 0;
-}
 
+	glm::mat4 trans;
+	trans = glm::rotate(trans, glm::radians(90.0f), glm::vec3(0.0, 0.0, 1.0));
+	trans = glm::scale(trans, glm::vec3(0.5, 0.5, 0.5));
+
+
+}
 // process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
 // ---------------------------------------------------------------------------------------------------------
 void processInput(GLFWwindow* window)

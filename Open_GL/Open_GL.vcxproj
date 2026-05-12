@@ -102,7 +102,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLFW\include;C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLAD\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLFW\include;C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLAD\include;C:\Users\Lenovo\source\repos\Open_GL\Dependencies</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -119,7 +119,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLFW\include;C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLAD\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLFW\include;C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLAD\include;C:\Users\Lenovo\source\repos\Open_GL\Dependencies</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -130,13 +130,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Dependencies\GLAD\src\glad.c" />
-    <ClCompile Include="Getting started\Textures.cpp" />
+    <ClCompile Include="Getting started\Transformations.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Getting started\shader.h" />
     <ClInclude Include="Getting started\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Getting started\5.1.transformation.fs" />
+    <None Include="Getting started\5.1.transformation.vs" />
     <None Include="Getting started\ourShader.fs" />
     <None Include="Getting started\ourShader.vs" />
     <None Include="Getting started\shader_for_textures.fs" />
