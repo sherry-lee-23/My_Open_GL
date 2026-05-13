@@ -130,7 +130,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Dependencies\GLAD\src\glad.c" />
-    <ClCompile Include="Getting started\Transformations.cpp" />
+    <ClCompile Include="Getting started\Coordinate_Systems_4.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Getting started\shader.h" />
@@ -139,6 +139,8 @@
   <ItemGroup>
     <None Include="Getting started\5.1.transformation.fs" />
     <None Include="Getting started\5.1.transformation.vs" />
+    <None Include="Getting started\6.1shader.fs" />
+    <None Include="Getting started\6.1shader.vs" />
     <None Include="Getting started\ourShader.fs" />
     <None Include="Getting started\ourShader.vs" />
     <None Include="Getting started\shader_for_textures.fs" />
