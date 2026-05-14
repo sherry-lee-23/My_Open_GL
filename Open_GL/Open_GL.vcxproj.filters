@@ -18,7 +18,7 @@
     <ClCompile Include="..\Dependencies\GLAD\src\glad.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Getting started\Coordinate_Systems_4.cpp">
+    <ClCompile Include="Getting started\Camera.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
