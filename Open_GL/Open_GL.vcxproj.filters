@@ -41,5 +41,6 @@
     <None Include="Getting started\5.1.transformation.fs" />
     <None Include="Getting started\6.1shader.vs" />
     <None Include="Getting started\6.1shader.fs" />
+    <None Include="Getting started\GettingStarted.md" />
   </ItemGroup>
 </Project>
