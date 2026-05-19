@@ -18,7 +18,7 @@
     <ClCompile Include="..\Dependencies\GLAD\src\glad.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Getting started\Camera2.cpp">
+    <ClCompile Include="Lighting\BasicLighting.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -27,6 +27,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Getting started\stb_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Lighting\shader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Lighting\stb_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Lighting\Camera.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -42,5 +51,13 @@
     <None Include="Getting started\6.1shader.vs" />
     <None Include="Getting started\6.1shader.fs" />
     <None Include="Getting started\GettingStarted.md" />
+    <None Include="Lighting\1.color.vs" />
+    <None Include="Lighting\1.color.fs" />
+    <None Include="Lighting\1.1lightCubeShader.vs" />
+    <None Include="Lighting\1.1lightCubeShader.fs" />
+    <None Include="Lighting\2.1.basic_lighting.vs" />
+    <None Include="Lighting\2.1.basic_lighting.fs" />
+    <None Include="Lighting\2.1.light_cube.vs" />
+    <None Include="Lighting\2.1.light_cube.fs" />
   </ItemGroup>
 </Project>

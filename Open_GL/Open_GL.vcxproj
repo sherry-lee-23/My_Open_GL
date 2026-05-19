@@ -130,11 +130,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Dependencies\GLAD\src\glad.c" />
-    <ClCompile Include="Getting started\Camera2.cpp" />
+    <ClCompile Include="Lighting\BasicLighting.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Getting started\shader.h" />
     <ClInclude Include="Getting started\stb_image.h" />
+    <ClInclude Include="Lighting\Camera.h" />
+    <ClInclude Include="Lighting\shader.h" />
+    <ClInclude Include="Lighting\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Getting started\5.1.transformation.fs" />
@@ -146,6 +149,14 @@
     <None Include="Getting started\ourShader.vs" />
     <None Include="Getting started\shader_for_textures.fs" />
     <None Include="Getting started\shader_for_textures.vs" />
+    <None Include="Lighting\1.1lightCubeShader.fs" />
+    <None Include="Lighting\1.1lightCubeShader.vs" />
+    <None Include="Lighting\1.color.fs" />
+    <None Include="Lighting\1.color.vs" />
+    <None Include="Lighting\2.1.basic_lighting.fs" />
+    <None Include="Lighting\2.1.basic_lighting.vs" />
+    <None Include="Lighting\2.1.light_cube.fs" />
+    <None Include="Lighting\2.1.light_cube.vs" />
     <None Include="x64\Debug\ourShader.fs" />
     <None Include="x64\Debug\ourShader.vs" />
   </ItemGroup>
