@@ -18,7 +18,7 @@
     <ClCompile Include="..\Dependencies\GLAD\src\glad.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Lighting\Lighting_casters3.cpp">
+    <ClCompile Include="Lighting\Multiple_lights.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -83,5 +83,9 @@
     <None Include="Lighting\5.3.light_casters.fs" />
     <None Include="Lighting\5.3.light_cube.vs" />
     <None Include="Lighting\5.3.light_cube.fs" />
+    <None Include="Lighting\6.1.multiple_lights.vs" />
+    <None Include="Lighting\6.1.multiple_lights.fs" />
+    <None Include="Lighting\6.1.light_cube.vs" />
+    <None Include="Lighting\6.1.light_cube.fs" />
   </ItemGroup>
 </Project>
