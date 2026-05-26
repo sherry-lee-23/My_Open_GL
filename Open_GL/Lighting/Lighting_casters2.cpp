@@ -61,10 +61,10 @@ int main() {
 
     glEnable(GL_DEPTH_TEST);
 
-    Shader lightingShader("C:\\Users\\Lenovo\\source\\repos\\Open_GL\\Open_GL\\Lighting\\5.1.light_casters.vs",
-        "C:\\Users\\Lenovo\\source\\repos\\Open_GL\\Open_GL\\Lighting\\5.1.light_casters.fs");
-    Shader lightCubeShader("C:\\Users\\Lenovo\\source\\repos\\Open_GL\\Open_GL\\Lighting\\5.1.light_cube.vs",
-        "C:\\Users\\Lenovo\\source\\repos\\Open_GL\\Open_GL\\Lighting\\5.1.light_cube.fs");
+    Shader lightingShader("C:\\Users\\Lenovo\\source\\repos\\Open_GL\\Open_GL\\Lighting\\5.2.light_casters.vs",
+        "C:\\Users\\Lenovo\\source\\repos\\Open_GL\\Open_GL\\Lighting\\5.2.light_casters.fs");
+    Shader lightCubeShader("C:\\Users\\Lenovo\\source\\repos\\Open_GL\\Open_GL\\Lighting\\5.2.light_cube.vs",
+        "C:\\Users\\Lenovo\\source\\repos\\Open_GL\\Open_GL\\Lighting\\5.2.light_cube.fs");
 
     float vertices[] = {
         // positions位置 // normals向量  // texture coords纹理坐标
@@ -185,9 +185,11 @@ int main() {
         lightingShader.setVec3("light.diffuse", 0.5f, 0.5f, 0.5f);
         lightingShader.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
 
-        lightingShader.setFloat("material.shininess", 32.0f); //数值越小，反光范围越大，整体越亮
+        lightingShader.setFloat("light.constant", 1.0f);
+        lightingShader.setFloat("light.linear", 0.09f);
+        lightingShader.setFloat("light.quadratic", 0.032f);
 
-        lightingShader.setVec3("light.direction", -0.2f, -1.0f, -0.3f);
+        lightingShader.setFloat("material.shininess", 32.0f); //数值越小，反光范围越大，整体越亮
 
         glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
         glm::mat4 view = camera.GetViewMatrix();

@@ -130,7 +130,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Dependencies\GLAD\src\glad.c" />
-    <ClCompile Include="Lighting\Lighting_casters1.cpp" />
+    <ClCompile Include="Lighting\Lighting_casters2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Getting started\shader.h" />
@@ -169,10 +169,14 @@
     <None Include="Lighting\4.2.lighting_maps.vs" />
     <None Include="Lighting\4.2.light_cube.fs" />
     <None Include="Lighting\4.2.light_cube.vs" />
-    <None Include="Lighting\5.1.ight_casters.vs" />
+    <None Include="Lighting\5.1.light_casters.vs" />
     <None Include="Lighting\5.1.light_casters.fs" />
     <None Include="Lighting\5.1.light_cube.fs" />
     <None Include="Lighting\5.1.light_cube.vs" />
+    <None Include="Lighting\5.2.light_casters.vs" />
+    <None Include="Lighting\5.2.light_cube.fs" />
+    <None Include="Lighting\5.2.light_cube.vs" />
+    <None Include="Lighting\5.2.light_casters.fs" />
     <None Include="x64\Debug\ourShader.fs" />
     <None Include="x64\Debug\ourShader.vs" />
   </ItemGroup>
