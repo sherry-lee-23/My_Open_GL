@@ -61,10 +61,10 @@ int main() {
 
     glEnable(GL_DEPTH_TEST);
 
-    Shader lightingShader("C:\\Users\\Lenovo\\source\\repos\\Open_GL\\Open_GL\\Lighting\\4.1.light_maps.vs",
-        "C:\\Users\\Lenovo\\source\\repos\\Open_GL\\Open_GL\\Lighting\\4.1.light_maps.fs");
-    Shader lightCubeShader("C:\\Users\\Lenovo\\source\\repos\\Open_GL\\Open_GL\\Lighting\\4.1.light_cube.vs",
-        "C:\\Users\\Lenovo\\source\\repos\\Open_GL\\Open_GL\\Lighting\\4.1.light_cube.fs");
+    Shader lightingShader("C:\\Users\\Lenovo\\source\\repos\\Open_GL\\Open_GL\\Lighting\\4.2.lighting_maps.vs",
+        "C:\\Users\\Lenovo\\source\\repos\\Open_GL\\Open_GL\\Lighting\\4.2.lighting_maps.fs");
+    Shader lightCubeShader("C:\\Users\\Lenovo\\source\\repos\\Open_GL\\Open_GL\\Lighting\\4.2.light_cube.vs",
+        "C:\\Users\\Lenovo\\source\\repos\\Open_GL\\Open_GL\\Lighting\\4.2.light_cube.fs");
 
     float vertices[] = {
         // positions位置 // normals向量  // texture coords纹理坐标
@@ -142,12 +142,13 @@ int main() {
     glEnableVertexAttribArray(0);
 
     unsigned int diffuseMap = loadTexture("resources/container2.png");
+	unsigned int specularMap = loadTexture("resources/container2_specular.png");
 
     // shader configuration
     // --------------------
     lightingShader.use();
     lightingShader.setInt("material.diffuse", 0);
-
+    lightingShader.setInt("material.specular", 1);
 
 
 
@@ -173,8 +174,7 @@ int main() {
 		lightingShader.setVec3("light.diffuse", 0.5f, 0.5f, 0.5f);
 		lightingShader.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
 
-        lightingShader.setVec3("material.specular", 0.5f, 0.5f, 0.5f);
-        lightingShader.setFloat("material.shininess", 32.0f);
+        lightingShader.setFloat("material.shininess", 64.0f); //数值越小，反光范围越大，整体越亮
 
 		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 		glm::mat4 view = camera.GetViewMatrix();
@@ -188,6 +188,8 @@ int main() {
         // bind diffuse map
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, diffuseMap);
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D, specularMap);
 
         // render the cube
         glBindVertexArray(cubeVAO);

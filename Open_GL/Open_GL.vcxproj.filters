@@ -67,5 +67,9 @@
     <None Include="Lighting\4.1.light_maps.fs" />
     <None Include="Lighting\4.1.light_cube.vs" />
     <None Include="Lighting\4.1.light_cube.fs" />
+    <None Include="Lighting\4.2.lighting_maps.vs" />
+    <None Include="Lighting\4.2.lighting_maps.fs" />
+    <None Include="Lighting\4.2.light_cube.vs" />
+    <None Include="Lighting\4.2.light_cube.fs" />
   </ItemGroup>
 </Project>
