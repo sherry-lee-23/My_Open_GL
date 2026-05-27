@@ -87,5 +87,6 @@
     <None Include="Lighting\6.1.multiple_lights.fs" />
     <None Include="Lighting\6.1.light_cube.vs" />
     <None Include="Lighting\6.1.light_cube.fs" />
+    <None Include="Lighting\Lighting.md" />
   </ItemGroup>
 </Project>

@@ -185,6 +185,7 @@
     <None Include="Lighting\6.1.light_cube.fs" />
     <None Include="Lighting\6.1.light_cube.vs" />
     <None Include="Lighting\6.1.multiple_lights.vs" />
+    <None Include="Lighting\Lighting.md" />
     <None Include="x64\Debug\ourShader.fs" />
     <None Include="x64\Debug\ourShader.vs" />
   </ItemGroup>
