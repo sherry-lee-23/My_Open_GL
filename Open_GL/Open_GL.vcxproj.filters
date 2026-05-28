@@ -18,7 +18,10 @@
     <ClCompile Include="..\Dependencies\GLAD\src\glad.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Lighting\Multiple_lights.cpp">
+    <ClCompile Include="Model Loading\mesh.h">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Model Loading\model_load.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -36,6 +39,18 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Lighting\Camera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Model Loading\stb_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Model Loading\shader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Model Loading\Camera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Model Loading\model.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -88,5 +103,7 @@
     <None Include="Lighting\6.1.light_cube.vs" />
     <None Include="Lighting\6.1.light_cube.fs" />
     <None Include="Lighting\Lighting.md" />
+    <None Include="Model Loading\1.model_loading.vs" />
+    <None Include="Model Loading\1.model_loading.fs" />
   </ItemGroup>
 </Project>

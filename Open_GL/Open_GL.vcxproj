@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -102,13 +102,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLFW\include;C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLAD\include;C:\Users\Lenovo\source\repos\Open_GL\Dependencies</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLFW\include;C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLAD\include;C:\Users\Lenovo\source\repos\Open_GL\Dependencies;C:\Users\Lenovo\source\repos\Open_GL\Dependencies\assimp\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLFW\lib-vc2022;C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLAD\include</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glfw3.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLFW\lib-vc2022;C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLAD\include;C:\Users\Lenovo\source\repos\Open_GL\Dependencies\assimp\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>assimp.lib;opengl32.lib;glfw3.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -119,18 +119,19 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLFW\include;C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLAD\include;C:\Users\Lenovo\source\repos\Open_GL\Dependencies</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLFW\include;C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLAD\include;C:\Users\Lenovo\source\repos\Open_GL\Dependencies;C:\Users\Lenovo\source\repos\Open_GL\Dependencies\assimp\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLFW\lib-vc2022;C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLAD\include</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glfw3.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLFW\lib-vc2022;C:\Users\Lenovo\source\repos\Open_GL\Dependencies\GLAD\include;C:\Users\Lenovo\source\repos\Open_GL\Dependencies\assimp\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>assimp.lib;opengl32.lib;glfw3.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Dependencies\GLAD\src\glad.c" />
-    <ClCompile Include="Lighting\Multiple_lights.cpp" />
+    <ClCompile Include="Model Loading\mesh.h" />
+    <ClCompile Include="Model Loading\model_load.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Getting started\shader.h" />
@@ -138,6 +139,10 @@
     <ClInclude Include="Lighting\Camera.h" />
     <ClInclude Include="Lighting\shader.h" />
     <ClInclude Include="Lighting\stb_image.h" />
+    <ClInclude Include="Model Loading\Camera.h" />
+    <ClInclude Include="Model Loading\model.h" />
+    <ClInclude Include="Model Loading\shader.h" />
+    <ClInclude Include="Model Loading\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Getting started\5.1.transformation.fs" />
@@ -186,6 +191,8 @@
     <None Include="Lighting\6.1.light_cube.vs" />
     <None Include="Lighting\6.1.multiple_lights.vs" />
     <None Include="Lighting\Lighting.md" />
+    <None Include="Model Loading\1.model_loading.fs" />
+    <None Include="Model Loading\1.model_loading.vs" />
     <None Include="x64\Debug\ourShader.fs" />
     <None Include="x64\Debug\ourShader.vs" />
   </ItemGroup>
