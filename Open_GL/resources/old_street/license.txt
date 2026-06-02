@@ -1,0 +1,11 @@
+Model Information:
+* title:	Old street
+* source:	https://sketchfab.com/3d-models/old-street-fe1dbb99de9c42bbad72797bb271c211
+* author:	Pasha (https://sketchfab.com/Pasha.)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Old street" (https://sketchfab.com/3d-models/old-street-fe1dbb99de9c42bbad72797bb271c211) by Pasha (https://sketchfab.com/Pasha.) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
