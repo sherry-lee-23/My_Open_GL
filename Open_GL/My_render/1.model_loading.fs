@@ -23,7 +23,7 @@ struct PointLight{
     vec3 diffuse;
 };
 
-#define NR_POINT_LIGHTS 10
+#define NR_POINT_LIGHTS 100
 
 uniform sampler2D texture_diffuse1;
 
